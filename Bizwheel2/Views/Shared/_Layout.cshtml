@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Tag -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='copyright' content='pavilan'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Tag  -->
+    <title>Bizwheel - Multipurpose Business & Digital Agency Html5 Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/favicon.png" href="~/nStyless/img/favicon.png">
+
+    <!-- Web Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bizwheel Plugins CSS -->
+    <link rel="stylesheet" href="~/nStyless/css/animate.min.css">
+    <link rel="stylesheet" href="~/nStyless/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/nStyless/css/cubeportfolio.min.css">
+    <link rel="stylesheet" href="~/nStyless/css/font-awesome.css">
+    <link rel="stylesheet" href="~/nStyless/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="~/nStyless/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="~/nStyless/css/owl-carousel.min.css">
+    <link rel="stylesheet" href="~/nStyless/css/slicknav.min.css">
+
+    <!-- Bizwheel Stylesheet -->
+    <link rel="stylesheet" href="~/nStyless/css/reset.css">
+    <link rel="stylesheet" href="~/nStyless/style.css">
+    <link rel="stylesheet" href="~/nStyless/css/responsive.css">
+
+    <!-- Bizwheel Colors -->
+    <!--<link rel="stylesheet" href="~/nStyless/css/skins/skin-1.css">
+    <!--<link rel="stylesheet" href="~/nStyless/css/skins/skin-2.css">-->
+    <!--<link rel="stylesheet" href="~/nStyless/css/skins/skin-3.css">-->
+    <!--<link rel="stylesheet" href="~/nStyless/css/skins/skin-4.css">-->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header class="header">
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <!-- Top Contact -->
+                        <div class="top-contact">
+                            <div class="single-contact"><i class="fa fa-phone"></i>Phone: +(27) 84-419-2002</div>
+                            <div class="single-contact"><i class="fa fa-envelope-open"></i>Email: 8064@ctucareer.co.za</div>
+                            <div class="single-contact"><i class="fa fa-clock-o"></i>Opening: 08AM - 09PM</div>
+                        </div>
+                        <!-- End Top Contact -->
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="topbar-right">
+                            <!-- Social Icons -->
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            </ul>
+                            <div class="button">
+                                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                                {
+                                    @Html.ActionLink("LogOut", "LogOut", "Account", null, new { @class = "bizwheel-btn" })
+                                }
+                                else
+                                {
+                                    @Html.ActionLink("Login", "Login", "Account", null, new { @class = "bizwheel-btn" })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Topbar -->
+        <!-- Middle Header -->
+        <div class="middle-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="middle-inner">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3 col-12">
+                                    <!-- Logo -->
+                                    <div class="logo">
+                                        <!-- Image Logo -->
+                                        <div class="img-logo">
+                                            <a href="~/Views/Home/index.cshtml">
+                                                <img src="~/nStyless/img/logo.png" alt="#">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="mobile-nav"></div>
+                                </div>
+                                <div class="col-lg-10 col-md-9 col-12">
+                                    <div class="menu-area">
+                                        <!-- Main Menu -->
+                                        <nav class="navbar navbar-expand-lg">
+                                            <div class="navbar-collapse">
+                                                <div class="nav-inner">
+                                                    <div class="menu-home-menu-container">
+                                                        <!-- Naviagiton -->
+                                                        <ul id="nav" class="nav main-menu menu navbar-nav">
+                                                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                                            <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                                                            <li>@Html.ActionLink("Portfolio", "Portfolio", "Home")</li>
+                                                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                                                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                                        </ul>
+                                                        <!--/ End Naviagiton -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <!--/ End Main Menu -->
+                                        <!-- Right Bar -->
+                                        <div class="right-bar">
+                                            <!-- Search Bar -->
+                                            <ul class="right-nav">
+                                                <li class="top-search"><a href="#0"><i class="fa fa-search"></i></a></li>
+                                                <li class="bar"><a class="fa fa-bars"></a></li>
+                                            </ul>
+                                            <!--/ End Search Bar -->
+                                            <!-- Search Form -->
+                                            <div class="search-top">
+                                                <form action="#" class="search-form" method="get">
+                                                    <input type="text" name="s" value="" placeholder="Search here" />
+                                                    <button type="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+                                                </form>
+                                            </div>
+                                            <!--/ End Search Form -->
+                                        </div>
+                                        <!--/ End Right Bar -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/ End Middle Header -->
+        <!-- Sidebar Popup -->
+        <div class="sidebar-popup">
+            <div class="cross">
+                <a class="btn"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="single-content">
+                <h4>About Bizwheel</h4>
+                <p>The main component of a healthy environment for self esteem is that it needs be nurturing. It should provide unconditional warmth.</p>
+                <!-- Social Icons -->
+                <ul class="social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                </ul>
+            </div>
+            <div class="single-content">
+                <h4>Important Links</h4>
+                <ul class="links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Pricing Plan</a></li>
+                    <li><a href="#">Blog & News</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--/ Sidebar Popup -->
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="footer" style="background-image:url('../../nStyless/img/map.png')">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Footer About -->
+                            <div class="single-widget footer-about widget">
+                                <div class="logo">
+                                    <div class="img-logo">
+                                        <a class="logo" href="~/Views/Home/index.cshtml">
+                                            <img class="img-responsive" src="~/nStyless/img/logo2.png" alt="logo">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="footer-widget-about-description">
+                                    <p>Beatae vitae dicta su explicabo nemo enim ipsam voluptatem quia voluptas sitBeatae vitae sitBeatae vitae dicta suntania..</p>
+                                </div>
+                                <div class="social">
+                                    <!-- Social Icons -->
+                                    <ul class="social-icons">
+                                        <li><a class="facebook" href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a class="twitter" href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a class="linkedin" href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a class="pinterest" href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
+                                        <li><a class="instagram" href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="button"><a href="#" class="bizwheel-btn">About Us</a></div>
+                            </div>
+                            <!--/ End Footer About -->
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-12">
+                            <!-- Footer Links -->
+                            <div class="single-widget f-link widget">
+                                <h3 class="widget-title">Company</h3>
+                                <ul>
+                                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                    <li>@Html.ActionLink("Services", "Services", "Home")</li>
+                                    <li>@Html.ActionLink("Portfolio", "Portfolio", "Home")</li>
+                                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                </ul>
+                            </div>
+                            <!--/ End Footer Links -->
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-12">
+                            <!-- Footer News -->
+                            <div class="single-widget footer-news widget">
+                                <h3 class="widget-title">Blog Page</h3>
+                                <!-- Single News -->
+                                <div class="single-f-news">
+                                    <div class="post-thumb"><a href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a></div>
+                                    <div class="content">
+                                        <p class="post-meta"><time class="post-date"><i class="fa fa-clock-o"></i>April 15, 2020</time></p>
+                                        <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single News -->
+                                <!-- Single News -->
+                                <div class="single-f-news">
+                                    <div class="post-thumb"><a href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a></div>
+                                    <div class="content">
+                                        <p class="post-meta"><time class="post-date"><i class="fa fa-clock-o"></i>April 10, 2020</time></p>
+                                        <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
+                                    </div>
+                                </div>
+                                <!--/ End Single News -->
+                            </div>
+                            <!--/ End Footer News -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <!-- Footer Contact -->
+                            <div class="single-widget footer_contact widget">
+                                <h3 class="widget-title">Contact</h3>
+                                <p>Beatae vitae dicta sunt explicabo nemo enim ipsam voluptatem</p>
+                                <ul class="address-widget-list">
+                                    <li class="footer-mobile-number"><i class="fa fa-phone"></i>(+27) 84-419-2002</li>
+                                    <li class="footer-mobile-number"><i class="fa fa-envelope"></i>8064@ctucareer.co.za</li>
+                                    <li class="footer-mobile-number"><i class="fa fa-map-marker"></i>Playfair blvd CE5 Vanderbijlpark</li>
+                                </ul>
+                            </div>
+                            <!--/ End Footer Contact -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+                            <!-- Footer Newsletter -->
+                            <div class="footer-newsletter">
+                                <form action="#" method="post" class="newsletter-area">
+                                    <input type="email" placeholder="Your email address">
+                                    <button type="submit">Sign Up</button>
+                                </form>
+                            </div>
+                            <!--/ End Footer Newsletter -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright-content">
+                                <!-- Copyright Text -->
+                                <p>© Copyright <a href="#">PRGSummative</a>. Design &amp; Development By <a target="_blank" href="#">Tshepo Motsapi</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ End Copyright -->
+        </footer>
+    </div>
+    <script src="~/nStyless/js/jquery.min.js"></script>
+    <script src="~/nStyless/js/jquery-migrate-3.0.0.js"></script>
+    <!-- Popper JS -->
+    <script src="~/nStyless/js/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="~/nStyless/js/bootstrap.min.js"></script>
+    <!-- Modernizr JS -->
+    <script src="~/nStyless/js/modernizr.min.js"></script>
+    <!-- ScrollUp JS -->
+    <script src="~/nStyless/js/scrollup.js"></script>
+    <!-- FacnyBox JS -->
+    <script src="~/nStyless/js/jquery-fancybox.min.js"></script>
+    <!-- Cube Portfolio JS -->
+    <script src="~/nStyless/js/cubeportfolio.min.js"></script>
+    <!-- Slick Nav JS -->
+    <script src="~/nStyless/js/slicknav.min.js"></script>
+    <!-- Slick Nav JS -->
+    <script src="~/nStyless/js/slicknav.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="~/nStyless/js/owl-carousel.min.js"></script>
+    <!-- Easing JS -->
+    <script src="~/nStyless/js/easing.js"></script>
+    <!-- Magnipic Popup JS -->
+    <script src="~/nStyless/js/magnific-popup.min.js"></script>
+    <!-- Active JS -->
+    <script src="~/nStyless/js/active.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
